@@ -1,12 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2021-10-25 17:52:57
- * @LastEditTime: 2021-10-27 17:05:35
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /vite-project/src/main.ts
- */
-
 // 引入vue主程序,createApp创建vue实例,使用mount挂载在节点上
 import { createApp } from 'vue' // 引入vue主程序
 import App from './App.vue' // 引入主页面

@@ -9,7 +9,7 @@ import 'element-plus/dist/index.css'
 
 // vue-router4 路由
 import { router } from '@/router/index'
-
+ 
 app.use(router) // 使用router插件
 app.use(Element) // 使用element组件库
 app.mount('#app') // 挂载到节点上

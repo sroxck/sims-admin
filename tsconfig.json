@@ -13,7 +13,7 @@
     "types": ["element-plus/global"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"], // 如果要使用index.tsx的，需要配置这个
+      "@/*": ["src/*"], 
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

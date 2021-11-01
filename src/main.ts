@@ -2,11 +2,10 @@
 import { createApp } from 'vue' // 引入vue主程序
 import App from './App.vue' // 引入主页面
 const app = createApp(App) // 通过主页面创建vue实例
-
 // element-plus 组件库
 import Element from 'element-plus'
 import 'element-plus/dist/index.css'
-
+import 'normalize.css/normalize.css'
 // vue-router4 路由
 import { router } from '@/router/index'
  

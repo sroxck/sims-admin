@@ -13,9 +13,6 @@ const backToDash = ()=>{
 <template>
 <div id="app">
   <router-view/>
-<!-- 3333
-  <button @click="backToDash">dashboard</button> -->
-  <!-- <el-button>23</el-button> -->
 </div>
 </template>
 

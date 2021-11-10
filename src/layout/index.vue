@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+import Navbar from '@/layout/components/Navbar/index.vue'
+import Sidebar from '@/layout/components/Sidebar/index.vue'
+</script>
+
 <template>
     <el-container style="height: 100vh; ">
         <Sidebar></Sidebar>
@@ -8,35 +13,6 @@
         </Navbar>
     </el-container>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-import { Message, Menu, Setting } from '@element-plus/icons'
-import Navbar from '@/layout/components/Navbar/index.vue'
-import Sidebar from '@/layout/components/Sidebar/index.vue'
-export default defineComponent({
-    components: {
-        Message,
-        Setting,
-        'icon-menu': Menu,
-        Navbar,
-        Sidebar
-    },
-    setup() {
-        const item = {
-            date: '2016-05-02',
-            name: 'Tom',
-            address: 'No. 189, Grove St, Los Angeles',
-        }
-
-        const tableData = ref(Array(20).fill(item))
-
-        return {
-            tableData,
-        }
-    },
-})
-</script>
 
 <style>
 .el-header {

@@ -37,6 +37,7 @@ export const constantRouter: Array<RouteConfig> = [
         },
       }
     ],
+    
     component:()=>import('@/layout/index.vue')
   },
 ]

@@ -15,6 +15,7 @@ const routerList = asyncRoutes.concat(constantRouter)
 <style >
 .el-aside {
   color: var(--el-text-color-primary);
+  width: 230px;
 }
 .el-menu{
   height: 100%;

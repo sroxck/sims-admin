@@ -6,20 +6,17 @@
   </el-aside>
 </template>
 <script lang="ts" setup>
-import { Message, Menu, Setting } from '@element-plus/icons'
 import sideItem from './item.vue'
-import { useRouter, useRoute } from 'vue-router'
 import {constantRouter} from '@/router/modules/constantRouter'
 import {asyncRoutes} from '@/router/modules/asyncRoutes'
-const routerList =constantRouter.concat(asyncRoutes)
-console.log(routerList);
-
-
-
+const routerList = asyncRoutes.concat(constantRouter)
 
 </script>
 <style >
 .el-aside {
   color: var(--el-text-color-primary);
+}
+.el-menu{
+  height: 100%;
 }
 </style>

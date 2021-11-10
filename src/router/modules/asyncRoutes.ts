@@ -103,7 +103,7 @@ export const asyncRoutes: Array<RouteConfig> = [
           icon: 'home',
           roles: ['admin'],
         },
-        component: () => import('@/views/dragTable/index.vue')
+        component: () => import('@/views/table/dragTable/index.vue')
       },
       {
         path: '/editTable',
@@ -112,7 +112,7 @@ export const asyncRoutes: Array<RouteConfig> = [
           icon: 'home',
           roles: ['admin'],
         },
-        component: () => import('@/views/editTable/index.vue')
+        component: () => import('@/views/table/editTable/index.vue')
       },
     ],
     meta: {

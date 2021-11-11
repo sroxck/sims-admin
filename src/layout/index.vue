@@ -20,4 +20,4 @@ import Sidebar from '@/layout/components/Sidebar/index.vue'
 
 <style>
 
-</style>
+</style> 

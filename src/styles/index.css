@@ -8,6 +8,9 @@
     font-size: 16px;
     @apply antialiased
 }
+.container{
+    @apply w-auto
+}
 /* vue 过渡动画样式 */
 .sale-fade-enter-active,
 .sale-fade-leave-active {

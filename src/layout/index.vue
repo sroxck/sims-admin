@@ -4,24 +4,20 @@ import Sidebar from '@/layout/components/Sidebar/index.vue'
 </script>
 
 <template>
-    <el-container style="height: 100vh; ">
-        <Sidebar></Sidebar>
-        <Navbar>
-            <el-main>
-                <router-view></router-view>
-            </el-main>
-        </Navbar>
-    </el-container>
+  <el-container style="height: 100vh; " class="bg-gray-50 text-lg">
+    <Sidebar></Sidebar>
+    <Navbar>
+      <el-main class="container">
+        <router-view v-slot="{ Component }">
+          <transition name="sale-fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+      </el-main>
+    </Navbar>
+  </el-container>
 </template>
 
 <style>
-.el-header {
-    background-color: #b3c0d1;
-    color: var(--el-text-color-primary);
-    line-height: 60px;
-}
 
-.el-aside {
-    color: var(--el-text-color-primary);
-}
 </style>

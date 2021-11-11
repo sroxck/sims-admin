@@ -1,5 +1,5 @@
 <template>
- <el-container>
+ <el-container class=" bg-gray-50 ">
       <el-header style="text-align: right; font-size: 12px">
         <el-dropdown>
           <el-icon style="margin-right: 15px"><setting /></el-icon>
@@ -21,10 +21,5 @@ import { Message, Menu  , Setting } from '@element-plus/icons'
 
 </script>
 <style>
-.el-header {
-  background-color: #b3c0d1;
-  color: var(--el-text-color-primary);
-  line-height: 60px;
-}
   
 </style>

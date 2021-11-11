@@ -4,3 +4,52 @@
 @tailwind components;
 @tailwind utilities;
 
+.html{
+    font-size: 16px;
+    @apply antialiased
+}
+/* vue 过渡动画样式 */
+.sale-fade-enter-active,
+.sale-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.sale-fade-enter {
+  transform: scale(0.97);
+  opacity: 0;
+}
+
+.sale-fade-leave-to {
+  transform: scale(1.03);
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.sale-down-enter-active,
+.sale-down-leave-active {
+  transition: all 0.3s ease;
+}
+
+.sale-down-enter {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.sale-down-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}

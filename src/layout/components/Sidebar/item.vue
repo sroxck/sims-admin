@@ -25,7 +25,7 @@ const hasOneChild = () => {
 <template>
   <template v-if="!props.item.meta.hidden" >
     <template v-if="hasOneChild()">
-      <el-menu-item  class="text" :index="state.oneRoute.path" v-if="state.oneRoute.meta">{{state.oneRoute.meta.title}}</el-menu-item>
+      <el-menu-item  class="text " :index="state.oneRoute.path" v-if="state.oneRoute.meta">{{state.oneRoute.meta.title}}</el-menu-item>
     </template>
     <el-sub-menu   :index="props.item.path" v-else>
       <template #title v-if="props.item.meta">{{props.item.meta.title }}</template>
@@ -35,9 +35,16 @@ const hasOneChild = () => {
 </template>
 <style >
 .el-sub-menu__title{
-   @apply text-base text-blue-900 text-opacity-70 bg-gray-50
+  height: 50px !important;
+  line-height: 50px !important;
+   @apply text-base text-blue-900 text-opacity-70 
 }
 .text{
+   height: 50px !important;
+  line-height: 50px !important;
   @apply text-base text-blue-900 text-opacity-70 bg-gray-50
+}
+.el-sub-menu .el-menu-item {
+  @apply text-sm
 }
 </style>

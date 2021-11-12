@@ -9,15 +9,24 @@ export const asyncRoutes: Array<RouteConfig> = [
       {
         path: '/home',
         meta: {
-          title: '首页',
+          title: '综合面板',
           icon: 'home',
           roles: ['admin'],
         },
         component: () => import('@/views/home/index.vue')
+      },
+      {
+        path: '/analytics',
+        meta: {
+          title: '数据分析',
+          icon: 'home',
+          roles: ['admin'],
+        },
+        component: () => import('@/views/analytics/index.vue')
       }
     ],
     meta: {
-      title: '首页',
+      title: '仪表盘',
     },
     component: Layout
   },

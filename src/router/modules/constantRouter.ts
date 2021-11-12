@@ -4,7 +4,7 @@ import {RouteMetaConfigRaw} from "@/types/route"
 type RouteConfig = RouteRecordRaw & RouteMetaConfigRaw
 export const constantRouter: Array<RouteConfig> = [
   {
-    path: '/',
+    path: '/demo',
     name: 'router-name', // 设定路由的名字，一定要填写不然使用<keep-alive>时会出现各种问题
     meta: {
       roles: ['admin'], // 设置该路由进入的权限，支持多个权限叠加

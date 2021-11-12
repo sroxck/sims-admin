@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "push":"sh push.sh"
   },
   "dependencies": {
     "axios": "^0.24.0",

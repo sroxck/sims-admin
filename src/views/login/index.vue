@@ -20,13 +20,13 @@ const login = ()=>{
 <div class="user-layout">
  <div class="flex flex-col items-center justify-center">
     <div class="login">
-      <el-from :model="state">
+      <el-form :model="state">
         <el-form-item>
           <el-input v-model="state.username" placeholder="请输入用户名"></el-input>
           <el-input v-model="state.password" placeholder="请输入密码"></el-input>
           <el-button @click="login">登录</el-button>
         </el-form-item>
-      </el-from>
+      </el-form>
     </div>
   </div>
 

@@ -1,9 +1,10 @@
-import { createStore } from "vuex";
-const modulesFiles = import.meta.globEager('./module/*.ts')
+import { createStore } from 'vuex'
 
+const modulesFiles = import.meta.globEager('./modules/*.ts')
 const pathList: string[] = []
-for (const key in modulesFiles) {
-	pathList.push(key)
+
+for (const path in modulesFiles) {
+  pathList.push(path)
 }
 const modules = pathList.reduce((modules: any, modulePath: string) => {
   const moduleName = modulePath.replace(/^\.\/modules\/(.*)\.\w+$/, '$1')
@@ -12,7 +13,7 @@ const modules = pathList.reduce((modules: any, modulePath: string) => {
   return modules
 }, {})
 const store = createStore<any>({
-	modules
+  modules
 })
 
 export default store

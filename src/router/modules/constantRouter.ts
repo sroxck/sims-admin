@@ -40,4 +40,11 @@ export const constantRouter: Array<RouteConfig> = [
     
     component:()=>import('@/layout/index.vue')
   },
+  {
+      path: '/login',
+      meta: {
+        title: '登录',
+      },
+      component: ()=>import('@/views/login/index.vue')
+  }
 ]

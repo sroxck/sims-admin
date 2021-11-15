@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "push":"sh push.sh"
+    "push": "sh push.sh"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "@types/node": "^16.11.6",
+    "@types/webpack-env": "^1.16.3",
     "@vitejs/plugin-vue": "^1.9.3",
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",

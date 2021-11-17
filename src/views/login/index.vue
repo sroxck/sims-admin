@@ -5,7 +5,7 @@ import { reactive } from 'vue';
 
 const state = reactive({
   username: '',
-  password: '',
+  password: '', 
 });  
 const login = ()=>{
   store.dispatch('user/login', {

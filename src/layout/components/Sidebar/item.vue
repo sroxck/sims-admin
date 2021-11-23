@@ -27,6 +27,7 @@ const hasOneChild = () => {
     <template v-if="hasOneChild()">
       <el-menu-item
         class="text"
+        :route="props.item"
         :index="state.oneRoute.path"
         v-if="state.oneRoute.meta"
       >{{ state.oneRoute.meta.title }}</el-menu-item>

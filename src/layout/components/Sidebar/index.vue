@@ -8,7 +8,7 @@
 </template>
 <script lang="ts" setup>
 import sideItem from './item.vue'
-import { useRouter, useRoute } from 'vue-router'
+import {  useRoute } from 'vue-router'
 import { constantRouter } from '@/router/modules/constantRouter'
 import { asyncRoutes } from '@/router/modules/asyncRoutes'
 const routerList = asyncRoutes.concat(constantRouter)
@@ -19,6 +19,7 @@ const {path} = useRoute()
   height: 100%;
 }
 .logo {
+
 }
 .el-sub-menu.is-active .el-sub-menu__title{
     color:  var(--el-menu-active-color);

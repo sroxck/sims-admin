@@ -4,7 +4,7 @@ type RouterConfig = RouteRecordRaw & { hidden?: boolean }
 import Layout from '@/layout/index.vue'
 import { constantRouter } from './modules/constantRouter'
 import { asyncRoutes } from './modules/asyncRoutes'
-
+ 
 export const router = createRouter({
   history: createWebHistory(),
   routes: constantRouter

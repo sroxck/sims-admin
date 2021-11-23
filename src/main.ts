@@ -10,6 +10,7 @@ import 'normalize.css/normalize.css'
 import { router } from '@/router/index'
  import "@/styles/index.css"
  import store from './store'
+['2','3'].splice()
 app.use(router) // 使用router插件
 app.use(store) // 使用router插件
 app.use(Element) // 使用element组件库

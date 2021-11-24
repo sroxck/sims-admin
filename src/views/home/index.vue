@@ -1,16 +1,24 @@
-<template lang="">
+<script lang="ts" setup>
+import chartBox from '@/components/Chart/index.vue'
+import chartBox1 from '@/components/Chart/bar.vue'
+import chartBox2 from '@/components/Chart/bar1.vue'
+</script>
+<template>
   <div class="home ">
     <section class="row">
       <div class="w-1/2  pr-3">
         <div class="card">
-            <h3>左边</h3>
+            <h3>网站分析</h3>
+            <chartBox :chartOption="{className:'ref'}"></chartBox>
         </div>
       </div>
       <div class="w-1/2 pl-3" >
         <div  class=" flex h-1/2">
             <div class="  w-1/2 pb-3 pr-3">
               <div class="card">
-                12
+                <h3 style="margin-bottom: 10px;">使用率</h3>
+          <chartBox2  :chartOption="{className:'ref2'}"></chartBox2>
+                
               </div>
             </div>
             <div class=" w-1/2  pb-3  pl-3" >
@@ -23,7 +31,7 @@
          <div  class=" flex h-1/2">
             <div class="  w-1/2 pt-3 pr-3">
               <div class="card">
-                12
+                
               </div>
             </div>
             <div class=" w-1/2 pt-3   pl-3" >
@@ -41,7 +49,9 @@
     <section class="row">
       <div class="w-1/2  pr-3">
         <div class="card">
-          <h3>右边</h3>
+          <h3>流量统计</h3>
+          <chartBox1  :chartOption="{className:'ref1'}"></chartBox1>
+
         </div>
       </div>
       <div class="w-1/2 pl-3" >
@@ -55,6 +65,7 @@
       <div class=" w-7/12 pr-3 ">
         <div class="card">
           <h3>右边</h3>
+
         </div>
       </div>
       <div class="w-5/12 pl-3" >

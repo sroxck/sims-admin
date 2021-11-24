@@ -2,16 +2,25 @@
 <script lang="ts" setup>
 import store from '@/store';
 import { reactive } from 'vue';
-
+import { useRouter ,useRoute } from 'vue-router';
 const state = reactive({
   username: '',
   password: '', 
 });  
+const router = useRouter();
 const login = ()=>{
+
   store.dispatch('user/login', {
   username: state.username,
   password: state.password,
-});
+}).then(res=>{
+  console.log(res);
+  if(res.msg == '登录成功'){
+    router.push('/home')
+    // useRouter().push('/home');
+  }
+})
+
 }
 
 
@@ -29,7 +38,6 @@ const login = ()=>{
       </el-form>
     </div>
   </div>
-
 </div>
  
 </template>

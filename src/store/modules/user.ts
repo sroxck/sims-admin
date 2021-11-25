@@ -1,8 +1,5 @@
 import { Module } from 'vuex'
-interface login {
-  username: string;
-  password: string;
-}
+import { login } from '@/interface/user'
 const userModule: Module<any, any> = {
   namespaced: true,
   state: {

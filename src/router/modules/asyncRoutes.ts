@@ -1,6 +1,6 @@
 import { RouteRecordRaw } from "vue-router";
 import Layout from '@/layout/index.vue'
-import {RouteMetaConfigRaw} from "@/types/route"
+import { RouteMetaConfigRaw } from "@/interface/route";
 type RouteConfig = RouteRecordRaw & RouteMetaConfigRaw
 export const asyncRoutes: Array<RouteConfig> = [
   {

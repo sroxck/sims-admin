@@ -4,10 +4,7 @@ import { ElNotification } from 'element-plus'
 import store from '@/store';
 import { reactive } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-interface login {
-  username: string;
-  password: string;
-}
+import { login } from '@/interface/user'
 const state = reactive<login>({
   username: 'jdd',
   password: '123456',

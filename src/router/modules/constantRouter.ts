@@ -1,6 +1,6 @@
+import { RouteMetaConfigRaw } from "@/interface/route";
 import { RouteRecordRaw } from "vue-router";
 
-import {RouteMetaConfigRaw} from "@/types/route"
 type RouteConfig = RouteRecordRaw & RouteMetaConfigRaw
 export const constantRouter: Array<RouteConfig> = [
   {

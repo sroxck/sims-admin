@@ -1,12 +1,13 @@
 <template>
-    <div :class="chartOption.className" id="chartsBox" :style="{ height: height, width: width }" />
+    <div :class="chartOption.className" id="chartsBox1" :style="{ height: height, width: width }" />
 </template>
 <script lang="ts" setup>
 import * as echarts from 'echarts'
 console.log(echarts);
 import 'echarts-liquidfill'
 import 'echarts/theme/macarons'
-import { onMounted, reactive, ref } from 'vue'
+import { onBeforeMount, onMounted, reactive, ref } from 'vue'
+
 import { getCurrentInstance } from 'vue-demi'
 type chartConfig = {
     className: string,
@@ -29,9 +30,10 @@ const props = withDefaults(defineProps<propConfig>(), {
 console.log(props);
 const root = getCurrentInstance() as any
 console.log(root);
-let chart = {}
+let chart:{setOption?:Function,dispose?:Function} = {}
 const initChart = () => {
-    chart = echarts.init(root.ctx.$el, '')
+    chart = echarts.init(document.querySelector(`.${props.chartOption.className}`) as HTMLElement, '')
+
     setOptions()
 }
 const setOptions = () => {
@@ -67,13 +69,19 @@ const setOptions = () => {
     }]
 
 };
-    chart.setOption(option)
+    if(chart.setOption){
+        chart.setOption(option)
+    }
 }
 
 onMounted(() => {
     initChart()
 })
-
+onBeforeMount(() => {
+    if(chart.dispose){
+        chart.dispose()
+    }
+})
 </script>
 
 <style>

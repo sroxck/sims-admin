@@ -9,7 +9,7 @@ import chartBox2 from '@/components/Chart/bar1.vue'
       <div class="w-1/2 pr-3">
         <div class="card">
           <h3>网站分析</h3>
-          <chartBox :chartOption="{ className: 'ref' }"></chartBox>
+          <chartBox :chartOption="{ className: 'ref24' }"></chartBox>
         </div>
       </div>
       <div class="w-1/2 pl-3">
@@ -17,7 +17,7 @@ import chartBox2 from '@/components/Chart/bar1.vue'
           <div class="w-1/2 pb-3 pr-3">
             <div class="card">
               <h3 style="margin-bottom: 10px;">使用率</h3>
-              <chartBox2 :chartOption="{ className: 'ref2' }"></chartBox2>
+              <chartBox2 :chartOption="{ className: 'ref242' }"></chartBox2>
             </div>
           </div>
           <div class="w-1/2 pb-3 pl-3">
@@ -45,13 +45,13 @@ import chartBox2 from '@/components/Chart/bar1.vue'
       <div class="w-1/2 pr-3">
         <div class="card">
           <h3>流量统计</h3>
-          <chartBox1 :chartOption="{ className: 'ref1' }"></chartBox1>
+          <chartBox1 :chartOption="{ className: 'ref1444' }"></chartBox1>
         </div>
       </div>
       <div class="w-1/2 pl-3">
         <div class="card">
           <h3>右边</h3>
-          <chartBox :chartOption="{ className: 'ref' }"></chartBox>
+          <chartBox :chartOption="{ className: 'ref33' }"></chartBox>
 
         </div>
       </div>
@@ -61,7 +61,7 @@ import chartBox2 from '@/components/Chart/bar1.vue'
       <div class="w-7/12 pr-3">
         <div class="card">
           <h3>右边</h3>
-          <chartBox :chartOption="{ className: 'ref' }"></chartBox>
+          <chartBox :chartOption="{ className: 'ref22' }"></chartBox>
 
         </div>
       </div>

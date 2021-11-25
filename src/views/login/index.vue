@@ -1,45 +1,53 @@
 
 <script lang="ts" setup>
+import { ElNotification } from 'element-plus'
 import store from '@/store';
 import { reactive } from 'vue';
-import { useRouter ,useRoute } from 'vue-router';
-const state = reactive({
-  username: '',
-  password: '', 
-});  
+import { useRouter, useRoute } from 'vue-router';
+interface login {
+  username: string;
+  password: string;
+}
+const state = reactive<login>({
+  username: 'jdd',
+  password: '123456',
+});
 const router = useRouter();
-const login = ()=>{
-
+const login = () => {
+  
   store.dispatch('user/login', {
-  username: state.username,
-  password: state.password,
-}).then(res=>{
-  console.log(res);
-  if(res.msg == '登录成功'){
-    router.push('/home')
-    // useRouter().push('/home');
-  }
-})
+    username: state.username,
+    password: state.password,
+  }).then(res => {
+    console.log(res);
+    if (res.msg == '登录成功') {
+      router.push('/home')
+      ElNotification({
+        title:'通知',
+        message: '登录成功',
+        type: 'success'
+      })
+    }
+  })
 
 }
 
 
 </script>
 <template>
-<div class="user-layout">
- <div class="flex flex-col items-center justify-center">
-    <div class="login">
-      <el-form :model="state">
-        <el-form-item>
-          <el-input v-model="state.username" placeholder="请输入用户名"></el-input>
-          <el-input v-model="state.password" placeholder="请输入密码"></el-input>
-          <el-button @click="login">登录</el-button>
-        </el-form-item>
-      </el-form>
+  <div class="user-layout">
+    <div class="flex flex-col items-center justify-center">
+      <div class="login">
+        <el-form :model="state">
+          <el-form-item>
+            <el-input v-model="state.username" placeholder="请输入用户名"></el-input>
+            <el-input v-model="state.password" placeholder="请输入密码"></el-input>
+            <el-button @click="login">登录</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
     </div>
   </div>
-</div>
- 
 </template>
 
 
@@ -48,14 +56,13 @@ const login = ()=>{
   margin: 0 auto;
   width: 1440px;
 }
-.login{
-
+.login {
 }
-.user-layout{
- min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.user-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>

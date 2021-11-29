@@ -31,7 +31,7 @@ export const asyncRoutes: Array<RouteConfig> = [
     component: Layout
   },
   {
-    path: '/',
+    path: '/doc',
     children: [
       {
         path: '/doc',

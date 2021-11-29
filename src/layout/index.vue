@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Navbar from '@/layout/components/Navbar/index.vue'
 import Sidebar from '@/layout/components/Sidebar/index.vue'
+import TagsView from '@/layout/components/TagsView/index.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import Sidebar from '@/layout/components/Sidebar/index.vue'
     <Sidebar></Sidebar>
     <Navbar>
       <el-main class="container">
+        <!-- <TagsView></TagsView> -->
         <router-view v-slot="{ Component }">
           <transition name="sale-fade" mode="out-in">
             <component :is="Component" />
@@ -19,5 +21,4 @@ import Sidebar from '@/layout/components/Sidebar/index.vue'
 </template>
 
 <style>
-
 </style> 

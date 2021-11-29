@@ -2,14 +2,28 @@
 import chartBox from '@/components/Chart/index.vue'
 import chartBox1 from '@/components/Chart/bar.vue'
 import chartBox2 from '@/components/Chart/bar1.vue'
+import chartBox3 from '@/components/Chart/bar2.vue'
 </script>
 <template>
   <div class="home">
     <section class="row">
       <div class="w-1/2 pr-3">
         <div class="card">
-          <h3>网站分析</h3>
-          <chartBox :chartOption="{ className: 'ref24' }"></chartBox>
+          <div class="h-1/3">
+            <h3>网站分析</h3>
+          <div class="flex justify-around">
+            <div class="flex flex-col">
+              <span>用户流量</span>
+              <span>用户流量</span>
+            </div>
+            <div class="flex flex-col">
+              <span>访问次数</span>
+              <span>访问次数</span>
+            </div>
+            <div>访问人数</div>
+          </div>
+          </div>
+          <chartBox class="h-2/3" :chartOption="{ className: 'ref24' }"></chartBox>
         </div>
       </div>
       <div class="w-1/2 pl-3">
@@ -51,7 +65,7 @@ import chartBox2 from '@/components/Chart/bar1.vue'
       <div class="w-1/2 pl-3">
         <div class="card">
           <h3>右边</h3>
-          <chartBox :chartOption="{ className: 'ref33' }"></chartBox>
+          <chartBox3 :chartOption="{ className: 'ref33' }"></chartBox3>
 
         </div>
       </div>
@@ -61,7 +75,7 @@ import chartBox2 from '@/components/Chart/bar1.vue'
       <div class="w-7/12 pr-3">
         <div class="card">
           <h3>右边</h3>
-          <chartBox :chartOption="{ className: 'ref22' }"></chartBox>
+          <chartBox3 :chartOption="{ className: 'ref4422' }"></chartBox3>
 
         </div>
       </div>

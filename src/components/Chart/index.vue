@@ -18,10 +18,11 @@ type chartConfig = {
 type propConfig = {
     height?: string,
     width?: string,
-    chartOption: chartConfig 
+    chartOption: chartConfig
     autoResize?: boolean
 }
 const props = withDefaults(defineProps<propConfig>(), {
+    height: '80%',
     width: '100%',
     autoResize: true,
 })

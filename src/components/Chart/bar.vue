@@ -21,6 +21,7 @@ type propConfig = {
     autoResize?: boolean
 }
 const props = withDefaults(defineProps<propConfig>(), {
+    height: '80%',
     width: '100%',
     autoResize: true,
 })

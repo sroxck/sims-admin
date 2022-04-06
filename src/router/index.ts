@@ -12,4 +12,4 @@ export const router = createRouter({
 for(const [i,v] of asyncRoutes.entries()){
   router.addRoute(v)
 }
-  
+   

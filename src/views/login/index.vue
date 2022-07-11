@@ -1,4 +1,18 @@
-
+<template>
+  <div class="user-layout">
+    <div class="flex flex-col items-center justify-center">
+      <div class="login">
+        <el-form :model="state">
+          <el-form-item>
+            <el-input v-model="state.username" placeholder="请输入用户名"></el-input>
+            <el-input v-model="state.password" placeholder="请输入密码"></el-input>
+            <el-button @click="login1">登录</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+    </div>
+  </div>
+</template>
 <script lang="ts" setup>
 import { ElNotification } from 'element-plus'
 import store from '@/store';
@@ -10,8 +24,7 @@ const state = reactive<login>({
   password: '123456',
 });
 const router = useRouter();
-const login = () => {
-  
+const login1 = () => {
   store.dispatch('user/login', {
     username: state.username,
     password: state.password,
@@ -26,26 +39,9 @@ const login = () => {
       })
     }
   })
-
 }
-
-
 </script>
-<template>
-  <div class="user-layout">
-    <div class="flex flex-col items-center justify-center">
-      <div class="login">
-        <el-form :model="state">
-          <el-form-item>
-            <el-input v-model="state.username" placeholder="请输入用户名"></el-input>
-            <el-input v-model="state.password" placeholder="请输入密码"></el-input>
-            <el-button @click="login">登录</el-button>
-          </el-form-item>
-        </el-form>
-      </div>
-    </div>
-  </div>
-</template>
+
 
 
 <style lang="css" scoped>

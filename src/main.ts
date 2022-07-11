@@ -21,5 +21,3 @@ app.use(router) // 使用router插件
 app.use(store) // 使用router插件
 app.use(Element) // 使用element组件库
 app.mount('#app') // 挂载到节点上 
-
-    

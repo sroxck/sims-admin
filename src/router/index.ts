@@ -10,6 +10,8 @@ export const router = createRouter({
   routes: constantRouter
 })
 for(const [i,v] of asyncRoutes.entries()){
+  console.log(v);
+  
   router.addRoute(v)
 }
      

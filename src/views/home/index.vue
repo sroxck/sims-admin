@@ -9,9 +9,9 @@ import chartBox3 from '@/components/Chart/bar2.vue'
     <section class="row">
       <div class="w-1/2 pr-3">
         <div class="card">
-          <div class="h-1/3">
+          <div class="">
             <h3>网站分析</h3>
-          <div class="flex justify-around">
+          <!-- <div class="flex justify-around">
             <div class="flex flex-col">
               <span>用户流量</span>
               <span>用户流量</span>
@@ -21,7 +21,7 @@ import chartBox3 from '@/components/Chart/bar2.vue'
               <span>访问次数</span>
             </div>
             <div>访问人数</div>
-          </div>
+          </div> -->
           </div>
           <chartBox class="h-2/3" :chartOption="{ className: 'ref24' }"></chartBox>
         </div>
@@ -66,7 +66,6 @@ import chartBox3 from '@/components/Chart/bar2.vue'
         <div class="card">
           <h3>右边</h3>
           <chartBox3 :chartOption="{ className: 'ref33' }"></chartBox3>
-
         </div>
       </div>
     </section>

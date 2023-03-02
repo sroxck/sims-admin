@@ -23,20 +23,20 @@ const hasOneChild = () => {
 }
 </script>
 <template>
-  <template v-if="!props.item.meta.hidden">
-    <template v-if="hasOneChild()">
+  <div v-if="!props.item.meta.hidden">
+    <div v-if="hasOneChild()">
       <el-menu-item
         class="text"
         :route="props.item"
         :index="state.oneRoute.path"
         v-if="state.oneRoute.meta"
       >{{ state.oneRoute.meta.title }}</el-menu-item>
-    </template>
+    </div>
     <el-sub-menu :index="props.item.path" v-else>
       <template #title v-if="props.item.meta">{{ props.item.meta.title }}</template>
       <item v-for="(child,index) in props.item.children" :key="index" :item="child"></item>
     </el-sub-menu>
-  </template>
+  </div>
 </template>
 <style >
 .el-sub-menu__title {
